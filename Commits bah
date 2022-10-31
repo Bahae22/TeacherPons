@@ -1,0 +1,32 @@
+from math import *
+
+class Point3D:
+
+#A point is defined by 3 coordinates
+    def __init__(self, x, y, z):
+        self.x=x
+        self.y=y
+        self.z=z
+
+    #Commit 1: __init__(constructor), setters, getters and __str__ (tostring)
+
+    def get_X(self):
+        return self.x
+    
+    def get_Y(self):
+        return self.y
+    
+    def get_Z(self):
+        return self.z
+
+    def set_X(self,x):
+        self.x=x
+    
+    def set_Y(self,y):
+        self.y=y
+
+    def set_Z(self,z):
+        self.z=z
+
+    def __str__(self):
+        return "X:"+str(self.x)+" Y:"+str(self.y)+" Z:"+str(self.z)
