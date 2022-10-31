@@ -43,12 +43,22 @@ class Point3D:
 
     #Commit 4: Determine quadrant
     def calculate_quadrant(self):
-        #Devuelve 0 si está en el origen de coordenadas o sobre alguno de los ejes.
-        #Devuelve 1 si está en el primer cuadrante (x e y positivos).
-        #Devuelve 2 si está en el segundo cuadrante (x negativo e y positivo).
-        #Devuelve 3 si está en el tercer cuadrante (x e y negativos).
-        #Devuelve 4 si está en el cuarto cuadrante (x positivo e y negativo).
-        pass
+
+        if(self.x == 0 || self.y == 0 || self.z == 0):
+            return 0
+        elif(self.x>0):
+            if(self.y>0):
+                #si x e y son positivos
+                return 1
+            else:
+                #si x es positivo e y es negativo
+                return 4
+        elif(self.y>0):
+            #x negativo e y positivo
+            return 2
+        else:
+            #x negativo e y negativo
+            return 3
 
 
     #Commit 5: Given a list of Points, determine which of them is closer to *self*
