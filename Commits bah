@@ -30,3 +30,7 @@ class Point3D:
 
     def __str__(self):
         return "X:"+str(self.x)+" Y:"+str(self.y)+" Z:"+str(self.z)
+        
+        #Commit 2: Distance to origin.
+    def distance_to_origin(self):
+        return math.sqrt((pow(self.get_x()) + pow(self.get_y()) + pow(self.get_z()))
